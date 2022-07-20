@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: account-service
+    
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/banca
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+    
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    
+#cloud:
+#  config:
+#    enabled: true
+#    uri: http://localhost:8088
